@@ -17,9 +17,13 @@ then
 			if ls "$d.git" -d &> /dev/null
 			then
 				# echo "$d is a repo"
-				cd "$d"
-				bash -c $0 $@
-				cd ..
+				if ! ls "$d.gitleaf.lock" -d &> /dev/null
+				then
+					#echo $d...
+					cd "$d"
+					bash -c $0 $@
+					cd ..
+				fi
 			else
 				if ! ls "$d.nogit.lock" &> /dev/null
 				then
