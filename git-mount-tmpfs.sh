@@ -5,7 +5,7 @@ sudo mount -t tmpfs -o size=5G,nr_inodes=10k,mode=0777 tmpfs .git/objects
 
 
 
-if git remote ; then
+if git --git-dir=. remote ; then
 	# TODO: separate confirmation
 	# It does not work properly, but fetching can be easily interrupted
 
