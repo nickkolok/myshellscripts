@@ -12,8 +12,8 @@
 
 #| grep $2 -B 309 | grep $3 -A 300 | grep $2 -B 309 | grep $3 -A 300
 
-bash -c "ls -t1 $1" | ~/sh/wrap-lines.sh | grep $2 -B 309 | grep $3 -A 300 | grep $2 -B 309 | grep $3 -A 300
-bash -c "ls -t1 $1" | ~/sh/wrap-lines.sh | grep $3 -B 309 | grep $2 -A 300 | grep $3 -B 309 | grep $2 -A 300
+bash -c "ls -t1 $1" | ~/sh/wrap-lines.sh | grep "$2" -B 309 | grep "$3" -A 300 | grep "$2" -B 309 | grep "$3" -A 300
+bash -c "ls -t1 $1" | ~/sh/wrap-lines.sh | grep "$3" -B 309 | grep "$2" -A 300 | grep "$3" -B 309 | grep "$2" -A 300
 
 
 #for f in $filelist; do echo $f; done | grep $2 -B 309 | grep $3 -A 300 | grep $2 -B 309 | grep $3 -A 300
